@@ -29,7 +29,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [https://github.com/notanut/testimonial-grid-section/](https://github.com/notanut//testimonial-grid-section/)
-- Live Site URL: https://grid-testimonials-css.netlify.app/](https://grid-testimonials-css.netlify.app/)
+- Live Site URL: [https://grid-testimonials-css.netlify.app/](https://grid-testimonials-css.netlify.app/)
 
 ## My process
 
