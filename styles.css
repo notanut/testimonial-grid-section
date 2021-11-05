@@ -1,0 +1,148 @@
+/* 300 */
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@100;300;600&display=swap");
+/* 500 */
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500&display=swap");
+/* 600 */
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  /* colors */
+  /* primary */
+  --moderate-violet: hsl(263, 55%, 52%);
+  --very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --very-dark-blackish-blue: hsl(219, 29%, 14%);
+  --white: hsl(0, 0%, 100%);
+
+  /* neutral */
+  --light-gray: hsl(0, 0%, 81%);
+  --light-grayish-blue: hsl(210, 46%, 95%);
+
+  /* font */
+  --font-family: "Barlow Semi Condensed", sans-serif;
+  --font-size: 13px;
+  --font-size-big: 20px;
+  --font-weight-regular: 500;
+  --font-weight-bold: 600;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  background: var(--light-grayish-blue);
+  font-weight: var(--font-weight-regular);
+}
+
+main {
+  max-width: 100%;
+}
+
+section {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "first first second fifth"
+    "third fourth fourth fifth";
+  gap: 1.5rem;
+  margin-bottom: 0;
+  justify-content: center;
+  align-content: center;
+}
+
+h2 {
+  font-size: var(--font-size-big);
+  font-weight: var(--font-weight-bold);
+}
+
+
+.first,
+.second,
+.third,
+.fourth,
+.fifth {
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.first,
+.second,
+.fourth {
+  color: var(--white);
+}
+
+.first {
+  background: url("./images/bg-pattern-quotation.svg") no-repeat,
+    var(--moderate-violet);
+  background-position: top 0 right 3vw;
+  color: var(--white);
+  grid-area: first;
+}
+
+.second {
+  background: var(--very-dark-grayish-blue);
+  grid-area: second;
+}
+
+.third {
+  grid-area: third;
+}
+
+.third,
+.fifth {
+  background: var(--white);
+  color: var(--very-dark-grayish-blue);
+}
+
+.fourth {
+  background: var(--very-dark-blackish-blue);
+  grid-area: fourth;
+}
+
+.fifth {
+  grid-area: fifth;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  margin-top: -0.5rem;
+}
+
+.profile-name {
+  padding-left: 0.33rem;
+}
+
+.profile-name p {
+  margin-top: -14px;
+}
+
+.profile-photo {
+  border-radius: 50%;
+  border: 2px solid var(--white);
+  transform: scale(75%);
+}
+
+footer {
+  margin-top: auto;
+}
+
+@media screen and (max-width: 825px) {
+  section {
+    margin-top: 3rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 0.2fr 0.1fr 0.2fr 0.2fr;
+    grid-template-areas:
+      "first"
+      "second"
+      "third"
+      "fourth"
+      "fifth";
+  }
+}
